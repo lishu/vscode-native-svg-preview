@@ -193,7 +193,7 @@
   "scripts": {
     "compile": "npx rimraf out/** && tsc -p ./",
     "lint": "eslint --ext .ts src && stylelint **/*.css",
-    "test": "echo 'No tests specified in vscode-native-svg-preview' && exit 0",
+    "test": "npm run lint",
     "vsce:package": "npx rimraf ./*.vsix && npm run compile && vsce package",
     "vsce:publish": "vsce publish",
     "vscode:prepublish": "npm run webpack && npm run webpack-web",

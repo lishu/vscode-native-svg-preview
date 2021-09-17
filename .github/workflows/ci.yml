@@ -26,9 +26,11 @@ jobs:
         key: npm-${{ hashFiles('package-lock.json') }}
         restore-keys: npm-
       if: runner.os == 'Windows'
-    - name: Install dependencies & run tests
-    - run: npm install
-    - run: xvfb-run -a npm test
+    - name: Install dependencies
+      run: npm install
+    - name: Run tests (Linux)
+      run: xvfb-run -a npm test
       if: runner.os == 'Linux'
-    - run: npm test
+    - name: Run tests (non-Linux)
+      run: npm test
       if: runner.os != 'Linux'
