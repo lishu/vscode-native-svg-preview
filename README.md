@@ -32,6 +32,28 @@ Automatic updates ensure that you will always be using the latest Native SVG Pre
 
 To activate the extension, click on the extension icon in the *Activity Bar*. Search `@installed svg preview`, right-click *Native SVG Preview* and enable the extension with the *Enable* entry in the <kbd>RMB</kbd> menu.
 
+### Visual Diffs
+
+There are two ways to configure Native SVG Preview to display SVG diffs visually:
+
+- Context menu:
+  1. Open the file list by clicking the *Explorer* icon in the *Activity Bar*.
+  2. Right-click an SVG file then press `Configure default editor for *.svg` at the bottom of the *Quick Input Widget*.
+  3. Select *SVG Preview* and then all SVGs will default to the read-only preview.
+- Preferences:
+  1. Use <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to access the *Command Palette*.
+  2. Search `settings json` then click *Preferences: Open Settings (JSON)*. Then add this to your `settings.json`:
+    ```jsonc
+    {
+      "workbench.editorAssociations": {
+      // TODO: merge with other settings then remove this comment
+        "*.svg": "svgPreview.previewEditor"
+      }
+    }
+    ```
+
+The `↪📄` (`go-to-file`) icon in the action menu switches back to the text editor.
+
 ## Contributing
 
 Contributions, especially bug reports and feature requests, are all greatly appreciated.
