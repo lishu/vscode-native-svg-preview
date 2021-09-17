@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "sndst00m.starfall-visual-studio-code",
+        "jock.svg",
+        "dotjoshjohnson.xml"
+    ],
+    "unwantedRecommendations": [
+        "simonsiefke.svg-preview",
+        "cssho.vscode-svgviewer",
+        "auchenberg.vscode-browser-preview",
+        "vitaliymaz.vscode-svg-previewer",
+		"henoc.svgeditor"
+    ]
+}
