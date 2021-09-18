@@ -22,15 +22,15 @@ jobs:
     - name: Cache dependencies
       uses: actions/cache@v2
       with:
-        path: ~/.npm
-        key: npm-${{ hashFiles('package-lock.json') }}
-        restore-keys: npm-
-      if: runner.os == 'Windows'
+        path: '**/node_modules'
+        key: yarn-${{ hashFiles('yarn.lock') }}
+        restore-keys: yarn-
+      if: runner.os != 'Linux'
     - name: Install dependencies
-      run: npm install
+      run: yarn install
     - name: Run tests (Linux)
-      run: xvfb-run -a npm test
+      run: xvfb-run -a yarn test
       if: runner.os == 'Linux'
     - name: Run tests (non-Linux)
-      run: npm test
+      run: yarn test
       if: runner.os != 'Linux'
