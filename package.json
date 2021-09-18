@@ -108,7 +108,7 @@
       "editor/title": [
         {
           "command": "svgPreview.showPreviewToSide",
-          "when": "activeCustomEditorId != 'svgPreview.previewEditor' && resourceExtname == .svg",
+          "when": "activeCustomEditorId != 'svgPreview.previewEditor' && activeEditor != 'workbench.editor.sidebysideEditor' && resourceExtname == .svg",
           "alt": "svgPreview.showPreview",
           "group": "navigation"
         },
@@ -146,13 +146,13 @@
         {
           "command": "svgPreview.showPreview",
           "category": "%category.svg%",
-          "when": "activeCustomEditorId != 'svgPreview.previewEditor' && resourceExtname == .svg",
+          "when": "activeCustomEditorId != 'svgPreview.previewEditor' && activeEditor != 'workbench.editor.sidebysideEditor' && resourceExtname == .svg",
           "group": "navigation"
         },
         {
           "command": "svgPreview.showPreviewToSide",
           "category": "%category.svg%",
-          "when": "activeCustomEditorId != 'svgPreview.previewEditor' && resourceExtname == .svg",
+          "when": "activeCustomEditorId != 'svgPreview.previewEditor' && activeEditor != 'workbench.editor.sidebysideEditor' && resourceExtname == .svg",
           "group": "navigation"
         },
         {
