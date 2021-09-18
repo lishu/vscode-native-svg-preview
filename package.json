@@ -33,7 +33,7 @@
     "color": "#2c2c32",
     "theme": "dark"
   },
-  "version": "1.60.0",
+  "version": "1.60.1",
   "publisher": "sndst00m",
   "icon": "assets/icon.png",
   "license": "MIT",
@@ -197,7 +197,7 @@
     "vsce:package": "npx rimraf ./*.vsix && yarn run compile && vsce package",
     "vsce:publish": "vsce publish",
     "vscode:prepublish": "yarn run webpack && yarn run webpack-web",
-    "vscode-install": "code --install-extension ./vscode-native-svg-preview-1.60.0.vsix",
+    "vscode-install": "code --install-extension ./vscode-native-svg-preview-1.60.1.vsix",
     "webpack": "npx webpack-cli --config extension.webpack.config.js --mode production",
     "webpack-dev": "npx webpack-cli --config extension.webpack.config.js --mode development",
     "webpack-web": "npx webpack-cli --config extension-browser.webpack.config.js --mode none",
